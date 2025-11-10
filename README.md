@@ -28,7 +28,7 @@ Script by Jordan Hardee.
 
 # PREREQUISITES:
 
-1. curl and wget must be installed.
+1. wget must be installed.
 2. This script must be run as an administrator.
 
 # AFTER RUNNING THE SCRIPT:
