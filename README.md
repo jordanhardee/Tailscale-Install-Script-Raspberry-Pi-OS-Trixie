@@ -1,5 +1,7 @@
 # Raspberry Pi OS Trixie - Tailscale Install Script README
 
+Update: Issue has been/ is being resolved by Tailscale. See bug report for more info: https://github.com/tailscale/tailscale/issues/17816
+
 # SCRIPT (Without comments or echo descriptions of commands):
 
         #!/bin/bash
