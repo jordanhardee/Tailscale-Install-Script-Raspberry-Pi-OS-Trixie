@@ -17,3 +17,16 @@ The original command given by Tailscale requires apt-key which is deprecated. We
 Exit administrator shell and run "tailscale up" to add the device to your Tailscale instance.
 Run "tailscale ip -4" to get your Tailscale IPv4 address.
 You may want to consider disabling key expiry to prevent the need to periodically re-authenticate.
+
+# SCRIPT (Without Comments or descriptions):
+
+        #!/bin/bash
+        
+        mkdir /etc/apt/keyrings
+        wget https://pkgs.tailscale.com/stable/raspbian/trixie.asc
+        gpg --output trixie.gpg --dearmor trixie.asc
+        cp trixie.gpg /etc/apt/keyrings/trixie.gpg
+        echo "# Tailscale packages for raspbian trixie
+        deb [signed-by=/etc/apt/keyrings/trixie.gpg] https://pkgs.tailscale.com/stable/raspbian trixie main" > /etc/apt/sources.list.d/tailscale.list
+        	echo "Updating package list and installing tailscale."
+        apt-get update && sudo apt-get install tailscale
