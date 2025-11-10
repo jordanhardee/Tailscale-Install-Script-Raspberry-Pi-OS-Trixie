@@ -35,5 +35,8 @@ cp trixie.gpg /etc/apt/keyrings/trixie.gpg
 	echo "Creating the same file given by the official website but we're specifying the key is signed by adding [signed-by=/etc/apt/keyrings/trixie.gpg] after deb"
 echo "# Tailscale packages for raspbian trixie
 deb [signed-by=/etc/apt/keyrings/trixie.gpg] https://pkgs.tailscale.com/stable/raspbian trixie main" > /etc/apt/sources.list.d/tailscale.list
+	echo "Removing keys from working directory."
+rm trixie.asc
+rm trixie.gpg
 	echo "Updating package list and installing tailscale."
 apt-get update && sudo apt-get install tailscale
