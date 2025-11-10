@@ -15,6 +15,7 @@
 
 # 1. curl and wget must be installed.
 # 2. This script must be run as an administrator.
+# 3. Be sure to run chmod +x to ensure it's executable! To run: ./tailscale-install-verbose.sh
 
 # AFTER RUNNING THE SCRIPT:
 
