@@ -15,6 +15,9 @@
         rm trixie.gpg
         apt-get update && sudo apt-get install tailscale
 
+Download an install script or copy-paste the above and save it as tailscale-install.sh or whatever .sh filename you'd like. 
+Be sure to run chmod +x to ensure it's executable! Then as an administrator run the command (i.e. ./tailscale-install.sh).
+
 # About
 
 This script may become unnecessary in the future or replaced by an official version. Check the [official page](https://tailscale.com/kb/1627/install-rpi-trixie) for updates!
